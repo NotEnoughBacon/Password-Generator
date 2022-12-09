@@ -17,19 +17,22 @@ generateBtn.onclick = function (getUserData) {
     return null;
   }
 
-  if (passwordLength == isNaN) {
-    alert ("Please type a valid number!")
-  }
+  passwordLength = parseInt (passwordLength); {
 
-  if (passwordLength < 8 || passwordLength > 128) {
-      alert ("Please choose a value between 8 and 128!")
+    if (passwordLength < 8 || passwordLength > 128) {
+      alert ("Please choose a number between 8 and 128!")
       return null;
     }
 
+    else {
+      alert ("Not a number, Please enter a valid number")
+      return null;
+    }
+  }  
 }
   
 
-
+/*Number.isInteger*/
 
 
 
