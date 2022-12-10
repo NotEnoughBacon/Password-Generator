@@ -6,7 +6,7 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
 var result = ''
-
+var passwordChar = []
 // Write password to the #password input
 
 generateBtn.onclick = function getUserData () {
@@ -41,7 +41,24 @@ generateBtn.onclick = function getUserData () {
       return getUserData();
     }
 
+    if (lowerCaseConfirm === true) {
+      passwordChar = passwordChar.concat(lowerCase)
+    }
+
+    if (upperCaseConfirm === true) {
+      passwordChar = passwordChar.concat(upperCase)
+    }
+
+    if (numericConfirm === true) {
+      passwordChar = passwordChar.concat(numeric)
+    }
+
+    if (specialCharConfirm === true) {
+      passwordChar = passwordChar.concat(specialChar)
+    }
+
     
+
 
 
 
