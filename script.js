@@ -20,8 +20,14 @@ generateBtn.onclick = function getUserData () {
       alert ("Goodbye!")
       return;
     }
+    //if they add a decimal, tell them its not possible to create a portion of a character
+    if (passwordLength.includes(".")) {
+      alert ("Please use whole numbers only.")
+      return getUserData();
+    }
     //converting the length selected into an interger 
     passwordLength = parseInt(passwordLength);
+
     //checking if its between 8 and 128 in length
     if (passwordLength < 8 || passwordLength > 128) {
       alert ("Please choose a number between 8 and 128!")
