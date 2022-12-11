@@ -14,6 +14,10 @@ var passwordChar = []
 generateBtn.onclick = function getUserData () {
 //resetting result if user wants to generate multiple passwords
   var result = ''
+  var lowerCaseConfirm = false
+  var upperCaseConfirm = false
+  var numericConfirm = false
+  var specialCharConfirm = false
 
   var passwordLength = prompt ("How long would you like your password? \n Must be between 8-128 characters long.")
   //if user clicks cancel, tell them CYA!
@@ -42,13 +46,13 @@ generateBtn.onclick = function getUserData () {
     
     else {
       //using my confirms to store true/false info on what type of password they want
-  var lowerCaseConfirm = confirm ("Use lower case letters? \n OK for yes, cancel for NO")
+  lowerCaseConfirm = confirm ("Use lower case letters? \n OK for yes, cancel for NO")
 
-  var upperCaseConfirm = confirm ("Use upper case letters? \n OK for yes, cancel for NO")
+  upperCaseConfirm = confirm ("Use upper case letters? \n OK for yes, cancel for NO")
 
-  var numericConfirm = confirm ("Use numbers? \n OK for yes, cancel for NO") 
+  numericConfirm = confirm ("Use numbers? \n OK for yes, cancel for NO") 
 
-  var specialCharConfirm = confirm ("Use special characters? \n OK for yes, cancel for NO")
+  specialCharConfirm = confirm ("Use special characters? \n OK for yes, cancel for NO")
     //if they didnt select anything, tell them to reconsider life, but to try again
     if (!lowerCaseConfirm && !upperCaseConfirm && !numericConfirm && !specialCharConfirm) {
       alert ("You must choose atleast one character type \n Please try again!")
